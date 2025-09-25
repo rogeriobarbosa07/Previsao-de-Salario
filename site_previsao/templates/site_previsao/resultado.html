@@ -1,0 +1,9 @@
+{% extends 'site_previsao/resultado.html' %}
+
+{% block content %}
+    {% if salario %}
+        <div class="card-footer text-center">
+            <h5 class="text-success">Salário estimado: R$ {{ salario }}</h5>
+        </div>
+    {% endif %}
+{% endblock %}

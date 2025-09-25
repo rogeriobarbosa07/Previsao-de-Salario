@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def previsao(request):
-    return render(request, 'site_previsao/previsao.html')
+    if request.method == 'POST':
+        return # trocar
 
-def resultado(request):
-    return render(request, 'site_previsao/resultado.html')
+    return render(request, 'site_previsao/previsao.html')
