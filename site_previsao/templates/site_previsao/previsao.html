@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Previsão de Salário</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="card shadow-lg rounded-3">
+            <div class="card-header text-center bg-primary text-white">
+                <h3>Previsão de Salário</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" class="row g-3">
+                    {% csrf_token %}
+                    <div class="col-md-12">
+                        <label for="meses" class="form-label">Insira a quantidade de meses trabalhados para fazer a previsão:</label>
+                        <input type="number" class="form-control" id="meses" name="meses" placeholder="Ex: 12 (equivalente a 1 ano)" required>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-success">Calcular Salário</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

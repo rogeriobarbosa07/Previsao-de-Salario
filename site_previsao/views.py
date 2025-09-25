@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def previsao(request):
     return render(request, 'site_previsao/previsao.html')
+
+def resultado(request):
+    return render(request, 'site_previsao/resultado.html')
